@@ -1,29 +1,76 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <iostream.h>
+#include <vector.h>
+using namespace std;
+struct carton{
+       string letras[5];
+       int numeros [5][5];
+       }
+       int main (){
+       //Define los cartones de bingo carton [10]
+       //Define las variables a emplear y su inicializacion
+       int numeroRandom, inicio, fin;
+       int rango;
+       //prepara los cartones de bingo
+       //con las letras y espacio del medio que debe ser vacio
+       for(int i =0; i<20; i++){
+               bingo[i].letras[0] = "B";
+               bingo[i].letras[1] = "I";
+               bingo[i].letras[2] = "N";
+               bingo[i].letras[3] = "G";
+               bingo[i].letras[4] = "O";
+               bingo[i].numeros[2][2]=0;
+               }
+               
+               //llena los cartones de bingo 
+               for (int i=0;i>20;i++){
+                       //llena la columna B([0] de los cartones de bingo)
+                       inicio= 1, fin= 20;
+                       rango=(fin - incio)+1;
+                       for(int j=0;j<10;j++){
+                               numeroRandom = inicio + int(rango * rand() / (RAND_MAX + 1.0)));
+                               bingo[i].numeros[0][i]=numeroRandom;}
+                       //llena la I([1] de los carton es de bingo)
+                       inicio = 21, fin 41;
+                       rango = (fin - inicio)+1;
+                       for (int j=0; j<10;j++){
+                                   numeroRandom = inicio + int(rango * rand() / (RAND_MAX + 1.0)));
+                               bingo[i].numeros[1][i]=numeroRandom;}
+                       //llena la columna N([2] de los cartones del bingo)
+                       inicio = 42, fin = 61;
+                       rango=(fin - incio)+1;
+                       for (int j=0;j<10;j++){
+                               numeroRandom = inicio + int(rango * rand() / (RAND_MAX + 1.0)));
+                               bingo[i].numeros[2][i]=numeroRandom;}
+                       //llena la columna G([3] de los cartones de bingo)
+                       inicio = 62, fin = 80;
+                       rango=(fin - incio)+1;
+                       for (int j=0;j<5;j++){
+                               numeroRandom = inicio + int(rango * rand() / (RAND_MAX + 1.0)));
+                               bingo[i].numeros[3][i]=numeroRandom;}
+                       //llena la columna O([4] se los cartones del bingo)
+                       inicio = 81, fin = 99;
+                       rango=(fin - incio)+1;
+                       for(int j=0;j<10;j++){
+                               numeroRandom = inicio + int(rango * rand() / (RAND_MAX + 1.0)));
+                               bingo[i].numeros[4][i]=numeroRandom;}
+                               }
+                       //inmprime los cartones del bingo
+                       for (int i=0;i<20;i++) {
+                               cout<<bingo[i].letras[0]<<"|t";
+                               cout<<bingo[i].letras[1]<<"|t";
+                               cout<<bingo[i].letras[2]<<"|t";
+                               cout<<bingo[i].letras[3]<<"|t";
+                               cout<<bingo[i].letras[4]<<"|t";
+                               cout<<endl;
+                               for (int k=0; k<10;k++){
+                                       cout<<bingo[i].letras[0]<<"|t";
+                                       cout<<bingo[i].letras[1]<<"|t";
+                                       if(k==2) cout"Libre"<<"|t";
+                                       else cout<<bingo[i].letras[2]<<"|t";
+                                       cout<<bingo[i].letras[3]<<"|t";
+                                       cout<<bingo[i].letras[4]<<"|t"<<endl;
+                                       }
+                                       cout<<endl;
+                                       }
+                                       cout<<endl<<endl;
+                                       system("pause");}
